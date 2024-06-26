@@ -1,0 +1,13 @@
+version: '3'
+networks:
+  bot:
+services:
+  api-bot-git:
+    build: .
+    ports:
+      - "8001:80"
+    volumes:
+      - .:/usr/src/app
+
+    networks:
+      - bot
